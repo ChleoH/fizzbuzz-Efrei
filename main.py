@@ -1,12 +1,10 @@
-nombre=int(input("Entrez un nombre: "))
-
 def is_fizz(n):
     return n % 3 == 0 or '3' in str(n)
 
 def is_buzz(n):
     return n % 5 == 0 or '5' in str(n)
 
-def fizzbuzz():
+def fizzbuzz(nombre):
     print("Entrée | Sortie")
     print("----------------")
     i= nombre
@@ -19,4 +17,4 @@ def fizzbuzz():
         
         print(f"{i:<6} | {result if result else i}")
 
-fizzbuzz()
+fizzbuzz(25)

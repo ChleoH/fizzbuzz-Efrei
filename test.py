@@ -1,4 +1,5 @@
 import unittest
+from main import is_fizz, is_buzz, fizzbuzz 
 
 class TestFizzBuzz(unittest.TestCase):
     def test_is_fizz(self):
@@ -13,7 +14,10 @@ class TestFizzBuzz(unittest.TestCase):
         self.assertFalse(is_buzz(3))  
     
     def test_fizzbuzz(self):
-        with self.assertLogs() as log:
-            fizzbuzz() 
-        self.assertIn("Fizz", log.output[0])
-        self.assertIn("Buzz", log.output[0])
+        results = fizzbuzz()
+        self.assertIn("Fizz", results[0])  # Ex: 3, 6, 9, etc.
+        self.assertIn("Buzz", results[4])  # Ex: 5, 10, 20, etc.
+        self.assertIn("FizzBuzz", results[14])  # Ex: 15, 30, 45, etc.
+
+if __name__ == '__main__':
+    unittest.main()
