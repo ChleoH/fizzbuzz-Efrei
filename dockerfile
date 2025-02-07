@@ -1,4 +1,4 @@
 FROM python:3.9
 WORKDIR /
 COPY . .
-CMD ["python", "test.py"]
+CMD ["python", "main.py"]

@@ -11,10 +11,13 @@ def fizzbuzz(num):
 def main():
     for i in range(1, 101):
         if i%3 == 0 and i % 5 == 0:
-            return "fizzbuzz"
+            print("fizzbuzz")
         elif i%3 == 0:
-            return "fizz"
+            print("fizz")
         elif i % 5 == 0:
-            return "buzz"
+            print("buzz")
         else:
-            return str(i)
+            print(str(i))
+
+if __name__ == '__main__':
+    main()
